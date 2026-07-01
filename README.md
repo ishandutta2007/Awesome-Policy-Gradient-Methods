@@ -32,23 +32,23 @@ flowchart LR
 
 Policy Gradient frameworks are strictly categorized based on how the directional gradient updates are baseline-corrected to minimize optimization variance.
 
-### A. REINFORCE (Vanilla Policy Gradient)
-*   **Mechanism:** Multiplies the raw log-probability gradient by the absolute unadjusted cumulative return ($G_t$) of the sequence rollout:
-    $$g = \mathbb{E} \left[ \nabla_\theta \log \pi_\theta(a_t|s_t) G_t \right]$$
-*   **Cons:** Exceptional structural simplicity, but suffers from extreme sample inefficiency and high variance.
+- ### A. REINFORCE (Vanilla Policy Gradient)
+	*   **Mechanism:** Multiplies the raw log-probability gradient by the absolute unadjusted cumulative return ($G_t$) of the sequence rollout:
+	    $$g = \mathbb{E} \left[ \nabla_\theta \log \pi_\theta(a_t|s_t) G_t \right]$$
+	*   **Cons:** Exceptional structural simplicity, but suffers from extreme sample inefficiency and high variance.
 
-### B. Advantage Actor-Critic (A2C / A3C)
-*   **Mechanism:** Introduces an explicit baseline by calculating the **Advantage Function**: $A(s,a) = Q(s,a) - V(s)$, practically estimated via the temporal difference (TD) error. The policy gradient is scaled by this delta:
-    $$g = \mathbb{E} \left[ \nabla_\theta \log \pi_\theta(a_t|s_t) A(s_t, a_t) \right]$$
-*   **Pros:** Focuses the gradient update strictly on whether an action performed better or worse than the *average expected outcome* for that state, drastically suppressing step variance.
+- ### B. Advantage Actor-Critic (A2C / A3C)
+	*   **Mechanism:** Introduces an explicit baseline by calculating the **Advantage Function**: $A(s,a) = Q(s,a) - V(s)$, practically estimated via the temporal difference (TD) error. The policy gradient is scaled by this delta:
+	    $$g = \mathbb{E} \left[ \nabla_\theta \log \pi_\theta(a_t|s_t) A(s_t, a_t) \right]$$
+	*   **Pros:** Focuses the gradient update strictly on whether an action performed better or worse than the *average expected outcome* for that state, drastically suppressing step variance.
 
-### C. Deep Deterministic Policy Gradient (DDPG / TD3)
-*   **Mechanism:** Tailored explicitly for continuous action domains where the policy output is deterministic ($a = \mu(s)$). The policy network parameter updates follow the direct directional gradient of a continuous critic model's action-value output with respect to the action coordinates themselves.
+- ### C. Deep Deterministic Policy Gradient (DDPG / TD3)
+	*   **Mechanism:** Tailored explicitly for continuous action domains where the policy output is deterministic ($a = \mu(s)$). The policy network parameter updates follow the direct directional gradient of a continuous critic model's action-value output with respect to the action coordinates themselves.
 
-### D. Clipped PPO Objective
-*   **Mechanism:** Optimizes policy parameters directly by taking the minimum of an unconstrained probability ratio update and a clipped alternative:
-    $$\mathcal{L}_{\text{CLIP}}(\theta) = \hat{\mathbb{E}}_t \left[ \min(r_t(\theta)\hat{A}_t, \text{clip}(r_t(\theta), 1-\epsilon, 1+\epsilon)\hat{A}_t) \right]$$
-*   **Pros:** Prevents the policy from taking overly destructive parameter steps that could trigger catastrophic capacity collapse during online distributed training sweeps.
+- ### D. Clipped PPO Objective
+	*   **Mechanism:** Optimizes policy parameters directly by taking the minimum of an unconstrained probability ratio update and a clipped alternative:
+	    $$\mathcal{L}_{\text{CLIP}}(\theta) = \hat{\mathbb{E}}_t \left[ \min(r_t(\theta)\hat{A}_t, \text{clip}(r_t(\theta), 1-\epsilon, 1+\epsilon)\hat{A}_t) \right]$$
+	*   **Pros:** Prevents the policy from taking overly destructive parameter steps that could trigger catastrophic capacity collapse during online distributed training sweeps.
 
 ---
 
