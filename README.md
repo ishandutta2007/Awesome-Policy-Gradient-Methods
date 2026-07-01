@@ -1,8 +1,19 @@
+---
+title: Awesome Policy Gradient Methods - Reinforcement Learning Algorithms
+description: A curated chronological list and comprehensive guide to policy gradient reinforcement learning methods, from REINFORCE to PPO, Actor-Critic variants, and reasoning model alignment.
+keywords: reinforcement learning, policy gradient, REINFORCE, PPO, TRPO, actor-critic, DDPG, TD3, DeepSeek-R1, robot torque control, portfolio optimization, AI algorithms
+---
+
 # 🚀 Awesome Policy Gradient Methods
 ## Policy Gradient Methods in AI: History, Progression, Variants, & Applications
 
 <p align="center">
   <img src="./assets/banner.svg" alt="Policy Gradient Methods Banner" width="100%">
+</p>
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+  <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
 </p>
 
 Policy Gradient (PG) methods represent a foundational optimization paradigm in Reinforcement Learning (RL) that directly parameterizes and optimizes an agent's policy ($\pi_\theta(a|s)$) to maximize expected cumulative rewards. Unlike value-based methods (such as Q-Learning or DQN) which learn a value function and derive actions implicitly via greedy selection, policy gradient algorithms compute directional gradients directly over the policy parameters $\theta$ using gradient ascent. This architecture inherently handles high-dimensional, continuous action spaces, natively learns stochastic policies, and guarantees smooth convergence, serving as the default algorithmic framework driving contemporary robot kinematics, distributed multi-agent gaming simulators, and large-scale post-training reasoning model alignments.
