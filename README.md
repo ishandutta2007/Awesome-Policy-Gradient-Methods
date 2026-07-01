@@ -100,6 +100,17 @@ To advance this documentation repository, infrastructure workspace, or post-trai
 * Generate a **comprehensive Markdown table** explicitly comparing REINFORCE, A2C (Actor-Critic), TRPO, and PPO across computational step complexity, execution memory tracking profiles, target action types (discrete vs. continuous), sample efficiency scales, and convergence guarantees.
 * Establish an **automated performance profiling suite using Triton** to track the exact computational throughput and memory bus latency metrics achieved when compiling a fused PPO token-generation and policy ratio clip calculation directly into high-speed GPU SRAM registers.
 
+##  Star History
+<div align="center">
+<a href="https://www.star-history.com/?repos=ishandutta2007%2FAwesome-Policy-Gradient-Methods&type=date&legend=bottom-right">
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Policy-Gradient-Methods&type=date&theme=dark&legend=bottom-right" />
+<source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Policy-Gradient-Methods&type=date&legend=bottom-right" />
+<img alt="Star History Chart" src="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Policy-Gradient-Methods&type=date&legend=bottom-right" />
+</picture>
+</a>
+</div>
+
 ***
 
 **Proactive Repository Follow-Ups:**
