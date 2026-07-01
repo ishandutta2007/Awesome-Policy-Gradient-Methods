@@ -14,6 +14,7 @@ keywords: reinforcement learning, policy gradient, REINFORCE, PPO, TRPO, actor-c
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 </p>
 
 Policy Gradient (PG) methods represent a foundational optimization paradigm in Reinforcement Learning (RL) that directly parameterizes and optimizes an agent's policy ($\pi_\theta(a|s)$) to maximize expected cumulative rewards. Unlike value-based methods (such as Q-Learning or DQN) which learn a value function and derive actions implicitly via greedy selection, policy gradient algorithms compute directional gradients directly over the policy parameters $\theta$ using gradient ascent. This architecture inherently handles high-dimensional, continuous action spaces, natively learns stochastic policies, and guarantees smooth convergence, serving as the default algorithmic framework driving contemporary robot kinematics, distributed multi-agent gaming simulators, and large-scale post-training reasoning model alignments.
