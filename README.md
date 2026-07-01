@@ -9,8 +9,11 @@ Policy Gradient (PG) methods represent a foundational optimization paradigm in R
 
 The algorithmic implementation of direct policy optimization has transitioned from basic analytical variance tracking to bounded statistical distance thresholds and clipped first-order inference approximations.
 
-```
-[REINFORCE (Williams, 1992)] ───> [Natural Gradient / TRPO (Schulman, 2015)] ───> [Clipped Proximal Bounds (PPO, 2017-Present)](High Variance Monte Carlo Loops)     (Second-Order Hard KL Trust Regions)             (First-Order Ratio Clamping Mechanisms)
+```mermaid
+flowchart LR
+    A["REINFORCE (Williams, 1992)<br/>(High-Variance Monte Carlo Updates)"]
+    --> B["Natural Gradient / TRPO (Schulman et al., 2015)<br/>(Second-Order KL Trust Regions)"]
+    --> C["Clipped Proximal Policy Optimization (PPO, 2017-Present)<br/>(First-Order Ratio Clipping)"]
 ```
 
 *   **The Baseline Monte Carlo Era (REINFORCE, Williams, 1992)**
