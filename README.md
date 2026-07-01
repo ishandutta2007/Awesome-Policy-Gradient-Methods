@@ -1,11 +1,15 @@
-# Awesome-Policy-Gradient-Methods
+# 🚀 Awesome Policy Gradient Methods
 ## Policy Gradient Methods in AI: History, Progression, Variants, & Applications
+
+<p align="center">
+  <img src="./assets/banner.svg" alt="Policy Gradient Methods Banner" width="100%">
+</p>
 
 Policy Gradient (PG) methods represent a foundational optimization paradigm in Reinforcement Learning (RL) that directly parameterizes and optimizes an agent's policy ($\pi_\theta(a|s)$) to maximize expected cumulative rewards. Unlike value-based methods (such as Q-Learning or DQN) which learn a value function and derive actions implicitly via greedy selection, policy gradient algorithms compute directional gradients directly over the policy parameters $\theta$ using gradient ascent. This architecture inherently handles high-dimensional, continuous action spaces, natively learns stochastic policies, and guarantees smooth convergence, serving as the default algorithmic framework driving contemporary robot kinematics, distributed multi-agent gaming simulators, and large-scale post-training reasoning model alignments.
 
 ---
 
-## 1. The Macro Chronological Evolution
+## 1. 📅 The Macro Chronological Evolution
 
 The algorithmic implementation of direct policy optimization has transitioned from basic analytical variance tracking to bounded statistical distance thresholds and clipped first-order inference approximations.
 
@@ -24,7 +28,7 @@ flowchart LR
 
 ---
 
-## 2. Core Algorithmic & Advantage Variants
+## 2. 🧠 Core Algorithmic & Advantage Variants
 
 Policy Gradient frameworks are strictly categorized based on how the directional gradient updates are baseline-corrected to minimize optimization variance.
 
@@ -37,7 +41,7 @@ Policy Gradient frameworks are strictly categorized based on how the directional
 
 ---
 
-## 3. Training Paradigms & Data Ingestion Modalities
+## 3. 🔄 Training Paradigms & Data Ingestion Modalities
 
 Depending on how experience transitions are processed and recycled through distributed clusters, PG implementations follow distinct scheduling tracks.
 
@@ -48,7 +52,7 @@ Depending on how experience transitions are processed and recycled through distr
 
 ---
 
-## 4. Production Engineering Challenges & Hardware Solutions
+## 4. ⚙️ Production Engineering Challenges & Hardware Solutions
 
 Executing large-scale policy gradient runs across massive distributed GPU clusters introduces unique optimization bottlenecks.
 
@@ -59,7 +63,7 @@ Executing large-scale policy gradient runs across massive distributed GPU cluste
 
 ---
 
-## 5. Frontier Real-World AI Infrastructure Applications
+## 5. 🌐 Frontier Real-World AI Infrastructure Applications
 
 | Application | Details | Year | First Paper |
 | :--- | :--- | :--- | :--- |
@@ -69,7 +73,7 @@ Executing large-scale policy gradient runs across massive distributed GPU cluste
 
 ---
 
-## References
+## 📚 References
 1. Williams, R. J. (1992). Simple statistical gradient-following algorithms for connectionist reinforcement learning. *Machine Learning*, 8(3-4), 229-256.
 2. Sutton, R. S., et al. (1999). Policy gradient methods for reinforcement learning with function approximation. *Advances in Neural Information Processing Systems (NeurIPS)*, 12.
 3. Schulman, J., et al. (2015). Trust region policy optimization. *International Conference on Machine Learning (ICML)*, 1889-1897.
